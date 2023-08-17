@@ -1,2 +1,2 @@
-# currency_converter
-A Currency Converter Web Application
+# Text Translator App
+A Text Translator Web Application
