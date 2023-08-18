@@ -27,8 +27,6 @@ translateButton.addEventListener("click", async () => {
   const targetLang = toLanguage.value;
   const text = textInput.value ? textInput.value : 'Good morning'
 
-  console.log(sourceLang, targetLang);
-
   const encodedParams = new URLSearchParams();
   encodedParams.set('source_language', `${sourceLang}`);
   encodedParams.set('target_language', `${targetLang}`);
@@ -48,7 +46,6 @@ translateButton.addEventListener("click", async () => {
   try {
     const response = await axios.request(options);
     const result = response.data.data
-    console.log(result);
     let TranslatedText = result.translatedText;
     TranslatedTextForm.innerText = TranslatedText;
   } catch (error) {
